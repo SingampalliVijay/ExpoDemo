@@ -10,7 +10,7 @@ export default function TabLayout() {
         tabBarActiveTintColor: 'blue',
         headerShown: true,
       }}>
-      <Tabs.Screen name="index"
+      <Tabs.Screen name="Product"
         options={{
           title: 'Products',
           tabBarIcon: ({ color, size }) =>
