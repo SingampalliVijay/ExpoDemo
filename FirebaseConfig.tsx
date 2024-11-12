@@ -1,16 +1,19 @@
 import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
 import { initializeAuth } from "firebase/auth";
-import {getFirestore} from "firebase/firestore";
+import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDZU5NIj8KbE90pQ-I2OsmY3xxTQtVLcpU",
-  authDomain: "expodemoapp-6a554.firebaseapp.com",
-  projectId: "expodemoapp-6a554",
-  storageBucket: "expodemoapp-6a554.firebasestorage.app",
-  messagingSenderId: "897788196486",
-  appId: "1:897788196486:web:3fb4d95856c48409380307"
+  apiKey: "AIzaSyDyDo7QD3IJjRa2df-yAwzB16qG1-hmA1s",
+  authDomain: "expoproject-564b0.firebaseapp.com",
+  projectId: "expoproject-564b0",
+  storageBucket: "expoproject-564b0.firebasestorage.app",
+  messagingSenderId: "734203552203",
+  appId: "1:734203552203:web:2648fa4092191ac091564e",
+  measurementId: "G-P2JW5RGXVJ"
 };
 
 export const FIREBASE_APP = initializeApp(firebaseConfig);
 export const FIREBASE_AUTH = initializeAuth(FIREBASE_APP);
+export const analytics = getAnalytics(FIREBASE_APP);
 export const FIRESTORE_DB = getFirestore(FIREBASE_APP);

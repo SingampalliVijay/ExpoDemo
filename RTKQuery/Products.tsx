@@ -22,7 +22,7 @@ const Products = () => {
       params: product
     })
   }
-  
+
   return (
     <SafeAreaView>
       <FlatList
@@ -31,16 +31,16 @@ const Products = () => {
         renderItem={({ item }) => {
           return (
             <Pressable onPress={() => handleProduct(item)}>
-            <View style={styles.card}>
-              <Image source={{ uri: item.images[0] }} style={styles.img} />
-              <View style={styles.list}>
-                <View>
-                  <Text style={styles.title}>{item.title}</Text>
-                  <Text style={{ margin: 10, paddingTop: 10 }}>{item.meta.createdAt}</Text>
-                  <Text style={{ fontSize: 25, marginLeft: 10, color: 'black' }}>${item.price}</Text>
+              <View style={styles.card}>
+                <Image source={{ uri: item.images[0] }} style={styles.img} />
+                <View style={styles.list}>
+                  <View>
+                    <Text style={styles.title}>{item.title}</Text>
+                    <Text style={{ margin: 10, paddingTop: 10 }}>{item.meta.createdAt}</Text>
+                    <Text style={{ fontSize: 25, marginLeft: 10, color: 'black' }}>${item.price}</Text>
+                  </View>
                 </View>
               </View>
-            </View>
             </Pressable>
           )
         }}
